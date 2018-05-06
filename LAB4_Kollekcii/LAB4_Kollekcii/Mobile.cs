@@ -28,6 +28,7 @@ namespace LAB4_Kollekcii
         public void Print()
         {
             Console.WriteLine(Info());
+
         }
 
     }
