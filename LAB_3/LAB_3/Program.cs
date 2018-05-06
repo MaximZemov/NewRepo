@@ -10,6 +10,7 @@ namespace LAB_3
     {
         static void Main()
         {
+            Collections();
             ColorTriangle t1 =
                  new ColorTriangle("синий", "прямоугольный", 8, 12);
             ColorTriangle t2 =
@@ -26,5 +27,18 @@ namespace LAB_3
             t2.ShowColor();
             Console.WriteLine("Площадь равна " + t2.Area());
         }
+
+        protected static void Collections()
+        {
+            ColorTriangle t2 = new ColorTriangle("красный", "равнобедренный", 2, 2);
+            ColorTriangle t1 = new ColorTriangle("синий", "прямоугольный", 8, 12);
+            List<ColorTriangle> objList = new List<ColorTriangle>();
+            objList.Add(t1);
+            objList.Add(t2);
+            objList.Sort(); //сортировка
+            objList.ForEach(t => t.ShowColor());
+            Console.ReadLine();
+        }
     }
+
 }
